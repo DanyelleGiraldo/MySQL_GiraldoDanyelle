@@ -66,7 +66,6 @@ INSERT INTO idioma (idioma) VALUES
 ('Árabe');
 
 -- Inserciones en la tabla "idioma_pais"
--- Asignación aleatoria de idiomas oficiales a cada país
 INSERT INTO idioma_pais (id_pais, id_idioma, es_oficial) VALUES
 (1, 1, 1),
 (2, 2, 1),
