@@ -923,12 +923,15 @@ INSERT INTO pago VALUES (26, 38, 'PayPal', '2006-05-26', 1171);
 
 /*Devuelve un listado con el código de oficina y la ciudad donde hay oficinas.*/
 SELECT codigo_oficina, ciudad FROM oficina;
+
 /*Devuelve un listado con la ciudad y el teléfono de las oficinas de España.*/
 SELECT ciudad, telefono FROM oficina WHERE pais = 'España';
+
 -- Devuelve un listado con el nombre, apellidos y email de los empleados cuyo jefe tiene un código de jefe igual a 7.
 SELECT nombre, apellido1, apellido2, email 
 FROM empleado 
 WHERE codigo_jefe = 7;
+
 -- Devuelve el nombre del puesto, nombre, apellidos y email del jefe de la empresa.
 SELECT e.puesto, e.nombre, e.apellido1, e.apellido2, e.email
 FROM empleado e
@@ -941,6 +944,7 @@ SELECT nombre_cliente FROM cliente WHERE pais = 'España';
 
 -- Devuelve un listado con los distintos estados por los que puede pasar un pedido.
 SELECT DISTINCT estado FROM pedido;
+
 -- Devuelve un listado con el código de cliente de aquellos clientes que realizaron algún pago en 2008. Tenga en cuenta que deberá eliminar aquellos códigos de cliente que aparezcan repetidos. Resuelva la consulta:
 -- Utilizando la función YEAR de MySQL.
 
@@ -954,7 +958,6 @@ FROM pago
 WHERE DATE_FORMAT(fecha_pago, '%Y') = '2008';
 
 -- sin utilizar ninguna de las funciones anteriores.
-
 SELECT DISTINCT codigo_cliente
 FROM pago
 WHERE fecha_pago >= '2008-01-01' AND fecha_pago <= '2008-12-31';
